@@ -15,9 +15,9 @@ The plugin requires [jQuery](http://jquery.com) and has been tested with *v1.6.2
 
 ## Usage
 
-Create a DOM element with the class `.darth-fader` somwhere in your page the child elements should be each slide to be displayed, this element must have its overflow hidden and be a fixed size. This will allow the first slide to display properly before the javascript loads, and degrade gracefully if javascript is turned off (although people who have javascript turned off shouldn't be allowed to use the internet). For example
+Create a DOM element with the class `darth-fader` somwhere in your page the child elements should be each slide to be displayed, this element must have its overflow hidden and be a fixed size. This will allow the first slide to display properly before the javascript loads, and degrade gracefully if javascript is turned off (although people who have javascript turned off shouldn't be allowed to use the internet). For example
 
-    <div class=".darth-fader">
+    <div class="darth-fader">
       <img title="image-1" class="slide-1"></img>
       <img title="image-2" class="slide-2"></img>
       <img class="slide-3"></img>
@@ -29,11 +29,11 @@ If you want to add some controls also add the following div somewhere in the pag
         
 This will automatically get the links added to it for each slide, any titles on the slides will also exist on the links. The following will be rendered to the page and you can style them however you like.
 
-    <div class="darth-fader-controls">
+    <ul class="darth-fader-controls">
       <li><a title="image-1"></a></li>
       <li><a title="image-2"></a></li>
       <li><a></a></li>
-    </div>
+    </ul>
         
 ### But I want more?
 
