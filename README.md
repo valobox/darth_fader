@@ -2,6 +2,7 @@
 
 It's a little jQuery plugin that simply fades between images, you can see an exmaple above. The aim of this plugin is for it to be super simple and fallback gracefully when the javascript isn't present.
 
+![Darth Fader](https://github.com/completelynovel/darth_fader/raw/master/assets/logo.png)
 
 ## Install
 
