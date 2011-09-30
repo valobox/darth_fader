@@ -24,8 +24,7 @@ class DarthFader
       if className.match(/^darth-fader/) 
         buttonControls = className.replace(/^darth-fader(.*)$/, "darth-fader-controls$1")
         buttonControls = $(".#{buttonControls}")
-        break
-      
+        break     
 
     faderGroup.children().each (idx,elem) =>
       faderElem = $(elem)
@@ -42,7 +41,7 @@ class DarthFader
         button = $("<a/>")
         button.attr('title', title) if title
         button.attr('href', "javascript:void(0);")
-        li     = $("<div/>").append(button)
+        li     = $("<li/>").append(button)
         buttonControls.append(li)
 
 
@@ -75,6 +74,11 @@ class DarthFader
     return if @currentIdx == idx
 
     @currentIdx = idx
+
+    # Due to a chrome set interval issue 
+    # LINK: <http://stackoverflow.com/questions/6183463/when-using-setinterval-if-i-switch-tabs-in-chrome-and-go-back-the-slider-goes-c>
+    prev.fader.stop(true,true)
+    next.fader.stop(true,true)
 
     prev.fader.fadeOut 700, () ->
       next.fader.fadeIn 700

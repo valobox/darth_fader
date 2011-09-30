@@ -46,7 +46,7 @@
             button.attr('title', title);
           }
           button.attr('href', "javascript:void(0);");
-          li = $("<div/>").append(button);
+          li = $("<li/>").append(button);
           buttonControls.append(li);
         }
         this.elems[idx] = {
@@ -80,6 +80,8 @@
         return;
       }
       this.currentIdx = idx;
+      prev.fader.stop(true, true);
+      next.fader.stop(true, true);
       return prev.fader.fadeOut(700, function() {
         return next.fader.fadeIn(700);
       });
